@@ -22,6 +22,7 @@
 		ABC218DC2AAC1C5E00DFBFD7 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC218DB2AAC1C5E00DFBFD7 /* PhotosViewController.swift */; };
 		ABC218DE2AAC1CB700DFBFD7 /* photosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC218DD2AAC1CB700DFBFD7 /* photosCollectionViewCell.swift */; };
 		ABC218E02AAC1CF300DFBFD7 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC218DF2AAC1CF300DFBFD7 /* PhotosViewModel.swift */; };
+		ABE770F32AAC65730042586A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE770F22AAC65730042586A /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		ABC218DB2AAC1C5E00DFBFD7 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotosViewController.swift; path = PhotosApp/Modules/AlbumsModule/View/PhotosViewController.swift; sourceTree = SOURCE_ROOT; };
 		ABC218DD2AAC1CB700DFBFD7 /* photosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = photosCollectionViewCell.swift; path = PhotosApp/Modules/AlbumsModule/View/photosCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		ABC218DF2AAC1CF300DFBFD7 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotosViewModel.swift; path = PhotosApp/Modules/AlbumsModule/View/PhotosViewModel.swift; sourceTree = SOURCE_ROOT; };
+		ABE770F22AAC65730042586A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,18 +113,11 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		ABC218BE2AAC0C4300DFBFD7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		ABC218BF2AAC0C5300DFBFD7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ABC218AA2AAC0B7400DFBFD7 /* ViewController.swift */,
 				ABC218D92AAC186100DFBFD7 /* AlbumsTableViewCell.swift */,
+				ABE770F22AAC65730042586A /* ViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -138,7 +133,6 @@
 		ABC218C12AAC0C6800DFBFD7 /* AlbumsModule */ = {
 			isa = PBXGroup;
 			children = (
-				ABC218BE2AAC0C4300DFBFD7 /* Model */,
 				ABC218BF2AAC0C5300DFBFD7 /* View */,
 				ABC218C02AAC0C5A00DFBFD7 /* ViewModel */,
 			);
@@ -148,7 +142,6 @@
 		ABC218C22AAC0CB000DFBFD7 /* PhotosModule */ = {
 			isa = PBXGroup;
 			children = (
-				ABC218C52AAC0CD400DFBFD7 /* Model */,
 				ABC218C42AAC0CCF00DFBFD7 /* View */,
 				ABC218C32AAC0CC200DFBFD7 /* ViewModel */,
 			);
@@ -170,13 +163,6 @@
 				ABC218DD2AAC1CB700DFBFD7 /* photosCollectionViewCell.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		ABC218C52AAC0CD400DFBFD7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		ABC218D22AAC102900DFBFD7 /* Models */ = {
@@ -268,9 +254,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABE770F32AAC65730042586A /* ViewController.swift in Sources */,
 				ABC218D42AAC103700DFBFD7 /* MoyaNetworkService.swift in Sources */,
 				ABC218D82AAC17FC00DFBFD7 /* AlbumsViewModel.swift in Sources */,
-				ABC218AB2AAC0B7400DFBFD7 /* ViewController.swift in Sources */,
 				ABC218D62AAC105A00DFBFD7 /* DataModels.swift in Sources */,
 				ABC218DC2AAC1C5E00DFBFD7 /* PhotosViewController.swift in Sources */,
 				ABC218DE2AAC1CB700DFBFD7 /* photosCollectionViewCell.swift in Sources */,

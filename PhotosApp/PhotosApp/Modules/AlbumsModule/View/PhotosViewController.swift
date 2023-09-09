@@ -1,6 +1,6 @@
 //
 //  PhotosViewController.swift
-//  PhotosApp
+//  MoyaDemo
 //
 //  Created by Ahmed Fekry on 09/09/2023.
 //
@@ -26,6 +26,7 @@ class PhotosViewController: UIViewController {
         }
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesSearchBarWhenScrolling = false
         searchController.searchResultsUpdater = self
         navigationItem.searchController = searchController
         title = albumName
