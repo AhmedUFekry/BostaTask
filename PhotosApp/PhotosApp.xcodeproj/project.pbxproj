@@ -16,6 +16,8 @@
 		ABC218C82AAC0D7F00DFBFD7 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = ABC218C72AAC0D7F00DFBFD7 /* Moya */; };
 		ABC218CA2AAC0D7F00DFBFD7 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = ABC218C92AAC0D7F00DFBFD7 /* RxMoya */; };
 		ABC218CD2AAC0D9D00DFBFD7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = ABC218CC2AAC0D9D00DFBFD7 /* Kingfisher */; };
+		ABC218D42AAC103700DFBFD7 /* MoyaNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC218D32AAC103700DFBFD7 /* MoyaNetworkService.swift */; };
+		ABC218D62AAC105A00DFBFD7 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC218D52AAC105A00DFBFD7 /* DataModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		ABC218AF2AAC0B7600DFBFD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABC218B22AAC0B7600DFBFD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABC218B42AAC0B7600DFBFD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABC218D32AAC103700DFBFD7 /* MoyaNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaNetworkService.swift; sourceTree = "<group>"; };
+		ABC218D52AAC105A00DFBFD7 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +66,7 @@
 		ABC218A52AAC0B7400DFBFD7 /* PhotosApp */ = {
 			isa = PBXGroup;
 			children = (
-				ABC218BB2AAC0BD300DFBFD7 /* Models */,
+				ABC218D22AAC102900DFBFD7 /* Models */,
 				ABC218BD2AAC0BFA00DFBFD7 /* View */,
 				ABC218BC2AAC0BDC00DFBFD7 /* Modules */,
 				ABC218BA2AAC0BA000DFBFD7 /* Utilities */,
@@ -79,13 +83,6 @@
 				ABC218AF2AAC0B7600DFBFD7 /* Assets.xcassets */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		ABC218BB2AAC0BD300DFBFD7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		ABC218BC2AAC0BDC00DFBFD7 /* Modules */ = {
@@ -169,6 +166,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		ABC218D22AAC102900DFBFD7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ABC218D32AAC103700DFBFD7 /* MoyaNetworkService.swift */,
+				ABC218D52AAC105A00DFBFD7 /* DataModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,7 +255,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC218D42AAC103700DFBFD7 /* MoyaNetworkService.swift in Sources */,
 				ABC218AB2AAC0B7400DFBFD7 /* ViewController.swift in Sources */,
+				ABC218D62AAC105A00DFBFD7 /* DataModels.swift in Sources */,
 				ABC218A72AAC0B7400DFBFD7 /* AppDelegate.swift in Sources */,
 				ABC218A92AAC0B7400DFBFD7 /* SceneDelegate.swift in Sources */,
 			);
