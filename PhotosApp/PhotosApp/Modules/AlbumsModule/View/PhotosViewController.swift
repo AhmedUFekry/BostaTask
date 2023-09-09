@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import RxSwift
 class PhotosViewController: UIViewController {
     
     
@@ -31,13 +32,17 @@ class PhotosViewController: UIViewController {
         navigationItem.searchController = searchController
         title = albumName
         photoViewModel = PhotosViewModel()
-        photoViewModel?.bindingPhotos = { [self] in
-            self.photosArr = photoViewModel?.ObservablePhotos
-            DispatchQueue.main.async {
-                 self.photosCollectionView.reloadData()
-            }
-            
-        }
+        photoViewModel?.ObservablePhotos.subscribe(onNext: { [weak self] photos in
+            self?.photosArr = photos
+            self?.photosCollectionView.reloadData()
+        }).disposed(by: photoViewModel!.disposeBag)
+//        photoViewModel?.bindingPhotos = { [self] in
+//            self.photosArr = photoViewModel?.ObservablePhotos
+//            DispatchQueue.main.async {
+//                 self.photosCollectionView.reloadData()
+//            }
+//
+//        }
         photoViewModel?.getPhotos(albumId: albumeId!)
         
         
@@ -85,11 +90,17 @@ extension PhotosViewController: UICollectionViewDataSource,UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             
             
-            return CGSize(width:self.view.frame.width*0.27, height: self.view.frame.height*0.10)
+        return CGSize(width:self.view.frame.width * 0.333 - 10.5, height: self.view.frame.height*0.10)
 
         }
-    
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0 // Adjust the vertical spacing between cells
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0 // Adjust the horizontal spacing between cells
+    }
+
     
     
 }

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import RxSwift
 class ViewController: UIViewController {
     
     @IBOutlet weak var userNameLabel: UILabel!
@@ -19,26 +19,41 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         albumsViewModel = AlbumsViewModel()
-        albumsViewModel?.bindingData = { [self] in
-            albumsArr = albumsViewModel!.ObservableAlbums!
-            usersArr = albumsViewModel!.usersArr
-            currentUser = albumsViewModel?.currentUser
-            DispatchQueue.main.async {
-                  self.userNameLabel.text = self.currentUser?.name
-                if let adress = self.currentUser?.address{
-                    self.userAddressLabel.text = "\(adress.street), \(adress.suite), \(adress.city), \(adress.zipcode)"
-                }
-                self.albumsTableView.reloadData()
+        
+        albumsViewModel?.getData()
+        
+        albumsViewModel?.ObservableAlbums.subscribe(onNext: { [weak self] albums in
+            self?.albumsArr = albums
+            self?.usersArr = self?.albumsViewModel!.usersArr ?? []
+            self?.currentUser = self?.albumsViewModel?.currentUser
+            self?.userNameLabel.text = self?.currentUser?.name
+            self?.albumsTableView.reloadData()
+            
+            if let adress = self?.currentUser?.address{
+                self?.userAddressLabel.text = "\(adress.street), \(adress.suite), \(adress.city), \(adress.zipcode)"
             }
             
-        }
-    
-        albumsViewModel?.getData()
+        }).disposed(by: albumsViewModel!.disposeBag)
+        
+//        albumsViewModel?.bindingData = { [self] in
+//            albumsArr = albumsViewModel!.ObservableAlbums!
+//            usersArr = albumsViewModel!.usersArr
+//            currentUser = albumsViewModel?.currentUser
+//            DispatchQueue.main.async {
+//                self.userNameLabel.text = self.currentUser?.name
+//                if let adress = self.currentUser?.address{
+//                    self.userAddressLabel.text = "\(adress.street), \(adress.suite), \(adress.city), \(adress.zipcode)"
+//                }
+//                self.albumsTableView.reloadData()
+//            }
+//
+//        }
+        
     }
     
-
-
-
+    
+    
+    
 }
 
 extension ViewController : UITableViewDataSource , UITableViewDelegate {
@@ -67,7 +82,7 @@ extension ViewController : UITableViewDataSource , UITableViewDelegate {
     }
     
     
-     
+    
     
     
 }

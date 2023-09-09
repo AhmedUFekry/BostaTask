@@ -7,6 +7,7 @@
 
 import Foundation
 import Moya
+import RxSwift
 
 protocol getAlbums {
     func getData()
@@ -14,18 +15,19 @@ protocol getAlbums {
 
 class AlbumsViewModel : getAlbums{
   
-    
+    let disposeBag = DisposeBag()
     var usersArr : [User] = []
     var currentUser : User?
    // var albumsArr : [Albums] = []
     var bindingData:(()->())?
     
-    var ObservableAlbums: [Albums]? {
-        didSet {
-            bindingData!()
-        }
-    }
+//    var ObservableAlbums: [Albums]? {
+//        didSet {
+//            bindingData!()
+//        }
+//    }
     
+    var ObservableAlbums: PublishSubject<[Albums]> = .init()
     
     func getData() {
         
@@ -47,8 +49,7 @@ class AlbumsViewModel : getAlbums{
                             
                             do{
                                 let albums = try JSONDecoder().decode([Albums].self, from: response.data)
-                                dump(albums)
-                                self.ObservableAlbums = albums
+                                self.ObservableAlbums.onNext(albums)
                                // self.albumsTableView.reloadData()
                               
                             }catch let error{
