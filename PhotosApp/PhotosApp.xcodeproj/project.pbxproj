@@ -18,6 +18,8 @@
 		ABC218CD2AAC0D9D00DFBFD7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = ABC218CC2AAC0D9D00DFBFD7 /* Kingfisher */; };
 		ABC218D42AAC103700DFBFD7 /* MoyaNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC218D32AAC103700DFBFD7 /* MoyaNetworkService.swift */; };
 		ABC218D62AAC105A00DFBFD7 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC218D52AAC105A00DFBFD7 /* DataModels.swift */; };
+		ABC218D82AAC17FC00DFBFD7 /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC218D72AAC17FC00DFBFD7 /* AlbumsViewModel.swift */; };
+		ABC218DA2AAC186100DFBFD7 /* AlbumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC218D92AAC186100DFBFD7 /* AlbumsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		ABC218B42AAC0B7600DFBFD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABC218D32AAC103700DFBFD7 /* MoyaNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaNetworkService.swift; sourceTree = "<group>"; };
 		ABC218D52AAC105A00DFBFD7 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		ABC218D72AAC17FC00DFBFD7 /* AlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlbumsViewModel.swift; path = PhotosApp/AlbumsViewModel.swift; sourceTree = SOURCE_ROOT; };
+		ABC218D92AAC186100DFBFD7 /* AlbumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				ABC218AA2AAC0B7400DFBFD7 /* ViewController.swift */,
+				ABC218D92AAC186100DFBFD7 /* AlbumsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 		ABC218C02AAC0C5A00DFBFD7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				ABC218D72AAC17FC00DFBFD7 /* AlbumsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -256,9 +262,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABC218D42AAC103700DFBFD7 /* MoyaNetworkService.swift in Sources */,
+				ABC218D82AAC17FC00DFBFD7 /* AlbumsViewModel.swift in Sources */,
 				ABC218AB2AAC0B7400DFBFD7 /* ViewController.swift in Sources */,
 				ABC218D62AAC105A00DFBFD7 /* DataModels.swift in Sources */,
 				ABC218A72AAC0B7400DFBFD7 /* AppDelegate.swift in Sources */,
+				ABC218DA2AAC186100DFBFD7 /* AlbumsTableViewCell.swift in Sources */,
 				ABC218A92AAC0B7400DFBFD7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
